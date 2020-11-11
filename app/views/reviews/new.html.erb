@@ -1,0 +1,7 @@
+<h1>Add a Review FORM</h1>
+
+<%= simple_form_for([ @restaurant, @review ]) do |f| %>
+  <%= f.input :content %>
+  <%= f.select :rating, [1, 2, 3, 4, 5,] %>
+  <%= f.submit %>
+<% end %>

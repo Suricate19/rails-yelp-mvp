@@ -1,0 +1,22 @@
+
+<H1> <%= @restaurant.name %></H1>
+
+<ul class="list-group">
+    <li class="list-group-item">Location : <%= @restaurant.address %></li>
+    <li class="list-group-item">Category : <%= @restaurant.category %></li>
+</ul>
+
+<%= link_to 'Back', restaurants_path, class:"btn btn-danger" %>
+<%= link_to 'Leave a review', new_restaurant_review_path(@restaurant), class:"btn btn-primary" %>
+
+
+
+<p>list with iteration</p>
+<ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item"><%= review.content %></li>
+    <li class="list-group-item"><%= review.rating %></li>
+  <% end %>
+</ul>
+
+
